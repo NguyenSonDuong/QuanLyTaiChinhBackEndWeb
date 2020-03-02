@@ -1,0 +1,30 @@
+.introduce2{
+    width: 100%;
+    height: 1148px;
+    padding-top: 147px;
+    z-index: 50;
+    padding-bottom: 1px;
+    background-color: #dfeadb4a;
+}
+#first_name{
+    width: 320px;
+}
+#last_name{
+    width: 320px;
+}
+#Gender{
+    width: 150px;
+    color: #ffa13e;
+    height: 37px;
+    border-radius: 5px;
+}
+#chapthuan{
+    width: 32px;
+    height: 32px;
+}
+#chapthuan2{
+    position: absolute;
+    top: 5px;
+    padding-left: 10px;
+    color: #ffa13e;
+}

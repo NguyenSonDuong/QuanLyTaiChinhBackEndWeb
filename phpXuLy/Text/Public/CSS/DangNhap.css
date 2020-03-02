@@ -1,0 +1,77 @@
+.introduce{
+    width: 100%;
+    height: 800px;
+    padding-top: 147px;
+    z-index: 50;
+    padding-bottom: 1px;
+    background-color: #dfeadb4a;
+}
+.navigation{
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    z-index: 100;
+    border-radius: 10px;
+    background-color: #c69a39;
+    margin-left: 0px;
+}
+.navbar{
+    background-color: #c69a39;
+    height: 100px;
+    width: 100%;
+}
+.container-fluid{
+    margin-top: 26px;
+    font-size: 23px;
+    margin-bottom: 19px;
+}
+.form-group .search-book{
+    width: 400px;
+    border-radius: 8px;
+    height: 40px;
+}
+.body-login{
+    height: 100%;
+    background-image: url("../../images/Ocelot_Berlin_02.jpg");
+    color: #4df900;
+    font-size: 19px;
+    padding-top: 77px;
+    padding-right: 80px;
+    font-weight: bold;
+}
+.body-login h2{
+    text-align: center;
+    color: #84e25a;
+    font-size: 50px;
+}
+.body-login .re-password{
+    color: #ffed00;
+    text-decoration: none;
+}
+.body-login .re-password:hover{
+    font-size: 20px;
+    color: red;
+}
+.body-login form input{
+    height: 45px;
+}
+.body-login .form-group .btn-primary{
+    width: 150px;
+    font-size: 20px;
+}
+.body-login .form-group .btn-primary:hover{
+    font-size: 30px;
+    color: red;
+}
+.body-login .form-group span{
+    float: right;
+}
+.body-login .form-group span a{
+    color: #ffed00;
+    font-weight: bold;
+    text-decoration: none;
+}
+.body-login .form-group span a:hover{
+    color: red;
+    font-size: 20px;
+}
