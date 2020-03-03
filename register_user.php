@@ -2,7 +2,6 @@
     require 'connect.php';
     $nickname = $_POST['nickname'];
     $password = $_POST['password'];
-
     if(!$_POST['nickname'] || !$_POST['password']){
         sendReponsive(404,jsonReponsiveError(404));
     }

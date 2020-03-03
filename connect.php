@@ -48,7 +48,40 @@ function insertLoginInfor($nickname, $password){
 function updateLoginInfor(){
 
 }
+function loginCheck($nickname, $passowrd){
+    global $connect;
+    if(!$connect){
+        connect_db();
+    }
+    $query = "SELECT * FROM logininfor WHERE nickname = ? AND pass= ?";
+    $stmt = mysqli_prepare($connect,$query);
+    mysqli_stmt_bind_param($stmt,"ss",$var1,$var2);
+    $var1 = $nickname;
+    $var2 = $passowrd;
+    $re = mysqli_stmt_execute($stmt);
+    mysqli_stmt_bind_result($stmt, $id,$nickname1 ,$passowrd1,$token,$cookie,$session,$create_time);
+    if($re){
+        $reponsive = array();
+        while (mysqli_stmt_fetch($stmt)){
+            $reponsive[] = array(
+                'ID'=>$id,
+                'nickname'=>$nickname1,
+                'password'=>$passowrd1,
+                'access_token'=>$token,
+                'cookie'=>$cookie,
+                'session'=>$session,
+                'create_time'=>$create_time
+            );
+        }
+        if(count($reponsive)!=1){
+            sendReponsive(404,jsonReponsiveError(404));
+        }else
+            return $reponsive;
+    }else{
+        sendReponsive(400,jsonReponsiveError(400));
+    }
 
+}
 function createToken($nickname, $password){
     return encodeStringByMe(md5($nickname)."|".md5($password)."//".md5(time()));
 }
